@@ -73,7 +73,7 @@ def analyze_spectrum(samples: list[Spectrum]) -> None:
     for s in samples:
         if config.baseline_correction_use:
             s.correct_linear_baseline()  # implicitly converts s to absorbance.
-
+        ref_multiplier = config.ref_multiplier # Needs to be reset before running the loop again.
         r2 = None
         if ref_multiplier is None:
             # Stack all reference y-data column-wise
