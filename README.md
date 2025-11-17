@@ -118,10 +118,7 @@ However manual fitting can be used in many cases to get a better fit and estimat
 ## Interpretation of Fitted Multipliers (Important)
 The least-squares multipliers produced by the tool represent only describe the relative contribution to the fitted model, which on their own do not represent physical quantities. 
 
-To arrive at gas abundances, the Beer–Lambert law can be used, which requires knowledge of:
-- Pressure
-- Temperature
-- Optical path length
+To arrive at gas abundances, the Beer–Lambert law can be used, which requires further knowledge of the sample and and reference spectra.
 
 ## Disclaimer
 This tool is intended for educational and research use.
