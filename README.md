@@ -43,14 +43,13 @@ The project does not provide any reference spectra, but to get up and running a 
 python3 scripts/download_references.py
 ```
 This downloads spectra for $`NH_3, H_2O, CO, N_2O, O_3, C_2H_6, CH_4`$ and $`CO_2`$.
-
+These reference spectra were used in the examples below, but to get the best results, references should be obtained from the same apparatus as the sample.
 ## Usage
 ### Default Behavior
 Running the tool without arguments analyzes all samples in the folder specified by `config.py`, by default `data/referece/`:
 ```
 python3 main.py
 ```
-
 ### List available reference spectra
 Prints a list of all references found in in the folder specified by `config.py`, by default `data/referece/`:
 ```
@@ -115,12 +114,15 @@ In this provided sample the tool was able to correctly predict the constituents 
 However manual fitting can be used in many cases to get a better fit and estimate.
 ![Manual_fit_of_sample_B](images/examples/sample_B_manual.png)
 
-## Interpretation of Fitted Multipliers (Important)
-The least-squares multipliers produced by the tool represent only describe the relative contribution to the fitted model, which on their own do not represent physical quantities. 
-
-To arrive at gas abundances, the Beer–Lambert law can be used, which requires further knowledge of the sample and and reference spectra.
+## Interpretation of Fitted Multipliers
+The least-squares fitting in this tool models the sample absorbance spectrum $\mathbf{S}$ as a linear combination of the reference spectra $\mathbf{r}_1$, each scaled by their corresponding multiplier $m_1$:
+$$
+\mathbf{S} = \sum_i m_i \mathbf{r}_i
+$$
+The least-squares multipliers produced by the tool hence represent relative scaling factors, not direct gas abundances. 
+To interpret the multipliers physically (e.g., to derive gas abundances), the Beer–Lambert law can be applied.
+However, this requires additional experimental information about both the sample and the reference measurements—such as the instrument setup, measurement conditions, and calibration parameters.
 
 ## Disclaimer
 This tool is intended for educational and research use.
-Physical interpretation of fits requires appropriate experimental metadata and the Beer–Lambert law.
 Do not use the results for safety-critical or industrial decision-making without proper validation.
