@@ -120,8 +120,8 @@ $$
 \mathbf{S} = \sum_i m_i \mathbf{r}_i
 $$
 The least-squares multipliers produced by the tool hence represent relative scaling factors, not direct gas abundances. 
-To interpret the multipliers physically (e.g., to derive gas abundances), the Beer–Lambert law can be applied.
-However, this requires additional experimental information about both the sample and the reference measurements—such as the instrument setup, measurement conditions, and calibration parameters.
+To interpret the multipliers physically (e.g., to derive gas abundances), the Beer-Lambert law can be applied.
+However, this requires additional experimental information about both the sample and the reference measurements, such as the instrument setup, measurement conditions, and calibration parameters.
 
 ## Disclaimer
 This tool is intended for educational and research use.
