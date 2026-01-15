@@ -117,9 +117,9 @@ However manual fitting can be used in many cases to get a better fit and estimat
 ## Interpretation of Fitted Multipliers
 The least-squares fitting in this tool models the sample absorbance spectrum $\mathbf{S}$ as a linear combination of the reference spectra $\mathbf{r}_1$, each scaled by their corresponding multiplier $m_1$:
 
-![S = sum_i m_i r_i](https://latex.codecogs.com/png.image?%5Cmathbf%7BS%7D=%5Csum_i%20m_i%20%5Cmathbf%7Br%7D_i)
-
-
+$$
+\mathbf{S} = \sum_i m_i \mathbf{r}_i
+$$
 
 The least-squares multipliers produced by the tool hence represent relative scaling factors, not direct gas abundances. 
 To interpret the multipliers physically (e.g., to derive gas abundances), the Beer-Lambert law can be applied.
